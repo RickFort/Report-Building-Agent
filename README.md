@@ -17,7 +17,7 @@ This document assistant uses a multi-agent architecture with LangGraph to handle
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/RickFort/Report-Building-Agent
+git clone https://github.com/RickFort/Document-Assistant-Project-Instructions
 cd Report-Building-Agent
 ```
 
