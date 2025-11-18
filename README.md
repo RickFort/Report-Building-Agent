@@ -17,7 +17,7 @@ This document assistant uses a multi-agent architecture with LangGraph to handle
 
 1. Clone the repository:
 ```bash
-cd <repository_path>
+cd [<repository_path>](https://github.com/RickFort/Report-Building-Agent)
 ```
 
 2. Create a virtual environment:
