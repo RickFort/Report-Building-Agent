@@ -68,6 +68,49 @@ The LangGraph agent follows this workflow:
 
 ![](./langgraph_agent_architecture.png)
 
+State Management
+The AgentState tracks:
+
+messages: Conversation history with LangChain message types
+user_input: Current user query
+intent: Classified intent with confidence score
+next_step: Next node to execute in the workflow
+conversation_summary: Rolling summary of conversation
+active_documents: Document IDs currently being discussed
+tools_used: List of tools invoked during processing
+actions_taken: Accumulated list of executed agent nodes (uses operator.add reducer)
+
+Key Components
+Schemas (schemas.py)
+
+UserIntent: Intent classification with type, confidence, and reasoning
+AnswerResponse: Structured Q&A responses with sources and confidence
+SummarizationResponse: Summary with key points and document references
+CalculationResponse: Mathematical results with step-by-step explanations
+
+Tools (tools.py)
+
+document_search: Search documents by keyword, type, or amount
+document_reader: Read full content of specific documents
+calculator: Safely evaluate mathematical expressions
+document_statistics: Get collection statistics and financial summaries
+
+Agents (agent.py)
+
+classify_intent: Routes requests to appropriate specialized agent
+qa_agent: Answers questions using ReAct pattern with tools
+summarization_agent: Creates summaries and extracts key information
+calculation_agent: Performs calculations on document data
+update_memory: Maintains conversation context and tracks active documents
+
+Built With
+
+LangChain - Framework for building LLM applications
+LangGraph - Library for building stateful, multi-actor applications with LLMs
+OpenAI GPT-4 - Large Language Model for natural language understanding
+Pydantic - Data validation using Python type annotations
+Python-dotenv - Environment variable management
+
 ## Expected Behavior
 
 After implementation, your assistant should be able to:
@@ -78,4 +121,8 @@ After implementation, your assistant should be able to:
 - Perform calculations on document data
 - Maintain conversation context across turns
 
-Good luck with your implementation! Remember to test thoroughly and refer to the existing working code for guidance on patterns and best practices.
+## License
+License
+
+## Authors
+Built as part of the Udacity [Agentic AI Engineer with LangChain and LangGraph]<https://www.udacity.com/course/agentic-ai-engineer-with-langchain-and-langgraph--nd901> Nanodegree Program .
