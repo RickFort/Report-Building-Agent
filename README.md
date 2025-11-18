@@ -124,4 +124,4 @@ After implementation, your assistant should be able to:
 License
 
 ## Authors
-Built as part of the Udacity <Agentic AI Engineer with LangChain and LangGraph>[https://www.udacity.com/course/agentic-ai-engineer-with-langchain-and-langgraph--nd901] Nanodegree Program .
+Built as part of the Udacity [Agentic AI Engineer with LangChain and LangGraph](https://www.udacity.com/course/agentic-ai-engineer-with-langchain-and-langgraph--nd901) Nanodegree Program .
